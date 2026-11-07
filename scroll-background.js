@@ -5,7 +5,7 @@ window.initIOBScroll = function initIOBScroll(video) {
   if (!window.gsap || !window.ScrollTrigger) return undefined;
 
   gsap.registerPlugin(ScrollTrigger);
-  const hero = video.closest('.hero');
+  
   const media = gsap.matchMedia();
   let disposed = false;
   let initialized = false;
@@ -27,13 +27,11 @@ window.initIOBScroll = function initIOBScroll(video) {
       video.addEventListener('seeked', seek);
       const timeline = gsap.timeline({
         scrollTrigger: {
-          trigger: hero,
-          start: () => `top top+=${document.querySelector('header').offsetHeight}`,
-          end: () => `+=${Math.round(window.innerHeight * 1.2)}`,
-          pin: true,
+          trigger: document.documentElement,
+          start: 0,
+          end: "max",
           scrub: 0.45,
-          invalidateOnRefresh: true,
-          anticipatePin: 1
+          invalidateOnRefresh: true
         }
       });
       timeline.to(playhead, { time: lastFrame, duration: 1, ease: 'none', onUpdate: seek }, 0);

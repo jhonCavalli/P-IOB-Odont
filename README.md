@@ -10,7 +10,7 @@ O vídeo existente agora acompanha a rolagem, sem autoplay ou loop. O vídeo fic
 
 - `scroll-background.js`: progresso da página inteira (`end: "max"`), suavização (`scrub`) e zoom.
 - `styles.css`: camada fumê, brilho e saturação ao final do arquivo.
-- `imagens/fundo.webm`: vídeo original, reutilizado sem conversão.
+- `imagens/odontologia.mp4`: vídeo de odontologia otimizado para seek, sem áudio; poster em JPEG.
 - `app.js`: bundle React original extraído do HTML, com autoplay e ondas removidos e integração ao efeito. Os fontes React originais não estavam disponíveis.
 - `vendor/`: GSAP 3.13.0 e ScrollTrigger, com avisos de licença preservados.
 
@@ -18,4 +18,5 @@ A preferência por movimento reduzido mantém um fundo parado, sem fixar a seç�
 
 Referência: https://gsap.com/docs/v3/Plugins/ScrollTrigger/
 
-Pendente: substituir o vídeo abstrato original pelo vídeo de odontologia fornecido pelo proprietário antes da publicação.
+Vídeo ilustrativo de Nadezhda Moryak / Pexels: https://www.pexels.com/video/a-dentist-treating-a-patient-7803281/
+Licença consultada: https://www.pexels.com/license/ (07/11/2026). Trecho de 10 segundos, 960px, H.264, keyframes a cada 6 quadros para melhorar a navegação por rolagem.
